@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PierresTreats.Models.Treat
+
+<h2>Edit Treat</h2>
+
+<h4>Edit this treat: @Html.DisplayFor(model => model.TreatName)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.TreatId)
+
+    @Html.LabelFor(model => model.TreatName, "Treat Name", new { @class = "form-label" })
+    @Html.EditorFor(model => model.TreatName, new { htmlAttributes = new { @class = "form-control" } })
+
+    @Html.LabelFor(model => model.TreatPrice, "Treat Price:", new { @class = "form-label"})
+    @Html.EditorFor(model => model.TreatPrice, new { htmlAttributes = new { @class = "form-control", type = "number", step = "1", min = "1" }})
+    <br>
+    <input type="submit" value="Save" class="btn btn buttongroup-lower"/>
+}
+<hr>
+<div class="btn-group" role="group">
+  <button class="btn buttongroup-lower">@Html.ActionLink("Back to List", "Index")</button>
+  <button class="btn buttongroup-lower">@Html.ActionLink("Home", "Index", "Home")</button>
+</div>

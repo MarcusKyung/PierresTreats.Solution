@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PierresTreats.Models.Flavor
+
+<h2>Edit Flavor</h2>
+
+<h4>Edit this Flavor: @Html.DisplayFor(model => model.FlavorName)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.FlavorId)
+
+    @Html.LabelFor(model => model.FlavorName, "Flavor Name", new { @class = "form-label" })
+    @Html.EditorFor(model => model.FlavorName, new { htmlAttributes = new { @class = "form-control" } })
+    <br>
+    <input type="submit" value="Save" class="btn btn buttongroup-lower"/>
+}
+<hr>
+<div class="btn-group" role="group">
+  <button class="btn buttongroup-lower">@Html.ActionLink("Back to List", "Index")</button>
+  <button class="btn buttongroup-lower">@Html.ActionLink("Home", "Index", "Home")</button>
+</div>
