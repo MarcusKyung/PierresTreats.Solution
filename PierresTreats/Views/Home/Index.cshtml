@@ -3,23 +3,30 @@
 }
 
 @using PierresTreats.Models;
+@if (User.Identity.IsAuthenticated)
+{
 <hr>
-<h3>Welcome, @User.Identity.Name!</h3>
+<h3>Welcome to Pierre's Treats, @User.Identity.Name!</h3>
 <hr>
-@{
-  Layout = "_Layout";
+}
+else
+{
+<hr>
+<h3>Welcome to Pierre's Treats!</h3>
+<p>Log in to view your saved treats</p>
+<hr>
 }
 
 @if (User.Identity.IsAuthenticated)
 {
   <div class="card mt-4">
     <div class="card-header">
-      <h4 class="card-title"><a href="/Treats" class="headerlink">Treats - (@Model["treats"].Length)</a></h4>
+      <h4 class="card-title">Treats - (@Model["treats"].Length)</h4>
     </div>
     <div class="card-body">
       @if (Model["treats"].Length == 0)
       {
-        <p>No treats have been added yet!</p>
+        <p>No flavors have been added yet!</p>
       } 
       <ul>
         @foreach (Treat treat in Model["treats"])
@@ -32,13 +39,19 @@
 }
 else
 {
-  <h4>Treats</h4>
-  <p>Please @Html.ActionLink("log in", "LogIn", "Account") to view or manage your treats.</p>
+<div class="card mt-4">
+  <div class="card-header">
+    <h4 class="card-title">Treats</h4>
+  </div>
+  <div class="card-body">
+    <p>Please @Html.ActionLink("log in", "LogIn", "Account") to view or manage your treats.</p>
+  </div>
+</div>
 }
 
 <div class="card mt-4">
   <div class="card-header">
-    <h4 class="card-title"><a href="/Flavors" class="headerlink">Tags - (@Model["flavors"].Length)</h4>
+    <h4 class="card-title">Flavors - (@Model["flavors"].Length)</h4>
   </div>
   <div class="card-body">
     @if (Model["flavors"].Length == 0)
