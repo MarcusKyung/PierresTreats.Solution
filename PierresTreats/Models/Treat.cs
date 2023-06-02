@@ -11,5 +11,7 @@ namespace PierresTreats.Models
         [Range(1, int.MaxValue, ErrorMessage = "Your price must be at least 1")]
         public int TreatPrice { get; set; }
         public List<FlavorTreat> FlavorTreatJoinEntities { get;}
+        public ApplicationUser User { get; set; }
+
     }
 }
