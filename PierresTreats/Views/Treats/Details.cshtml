@@ -1,0 +1,54 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PierresTreats.Models
+@model PierresTreats.Models.Treat
+
+<h2>Treat Details</h2>
+<hr />
+<h3>Treat Name: @Html.DisplayFor(model => model.TreatName)</h3>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button class="btn buttongroup-upper ">@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</button>
+  <button class="btn buttongroup-upper">@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</button>
+</div>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Flavors
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        @if(@Model.FlavorTreatJoinEntities.Count == 0)
+        {
+          <p>This flavor does not have any any treats added yet - @Html.ActionLink("Add an Treat", "AddTreat", new { id = Model.TreatId })</p>
+        }
+        else
+        {
+          <h4>This flavor uses the following treats:</h4>
+          <ul>
+          @foreach(FlavorTreat join in Model.FlavorTreatJoinEntities)
+          {
+            <li>@join.Flavor.FlavorName</li>
+            @using (Html.BeginForm("DeleteJoin", "Flavors"))
+            {
+              @Html.Hidden("joinId", @join.FlavorTreatId)
+              <input type="submit" value="Delete"/>
+            }
+          }
+          </ul>
+        }      
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="btn-group" role="group">
+  <button class="btn buttongroup-lower">@Html.ActionLink("Back to List", "Index")</button>
+  <button class="btn buttongroup-lower">@Html.ActionLink("Add an Flavor", "AddFlavor", new { id = Model.TreatId })</button>
+  <button class="btn buttongroup-lower">@Html.ActionLink("Home", "Index", "Home")</button>
+</div>
