@@ -4,7 +4,7 @@
 
 @using PierresTreats.Models;
 <hr>
-<h1>Treats for @User.Identity.Name</h1>
+<h1>Treats</h1>
 <hr>
 <div class="btn-group test-case" role="group" aria-label="Basic example">
   <button class="btn buttongroup-upper ">@Html.ActionLink("Sort by Price", "Index", new { sortOrder = "price" })</button>
@@ -23,7 +23,7 @@ else
       <div class="col">
         <div class="card treat-card">
           <div class="card-body">
-            <h5 class="card-title treat-title">@Html.ActionLink($"{treat.TreatName}", "Details", new { id = treat.TreatId })</h5>
+            <h5 class="card-title treat-title">@Html.ActionLink($"{treat.TreatName} - ${treat.TreatPrice}", "Details", new { id = treat.TreatId })</h5>
           </div>
         </div>
       </div>
