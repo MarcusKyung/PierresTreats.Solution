@@ -1,0 +1,175 @@
+/* FOOTER STYLING */
+div#footer { 
+	position: fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	background: #0050a4;
+	padding:8px;
+}
+
+#footerLink {
+	color: white;
+}
+
+
+/* NAVBAR STYLING */
+.navbar {
+	background-color: #0050a4;
+	padding: 5px;
+}
+
+.nav-btn {
+	background-color: #0050a4;
+	color: white;
+	outline: 2px solid #0050a4;
+}
+
+.nav-btn:hover {
+	background-color: white;
+	color: #0050a4;
+	outline-color: 2px solid #0050a4;
+}
+
+.navbar-nav .nav-link {
+	color: #0050a4; 
+}
+
+.nav-link:hover {
+	color: #0050a4; 
+	text-decoration: underline;
+}
+
+.offcanvas-title {
+	text-decoration: underline;
+}
+
+.navbar-brand {
+	font-size: larger;
+}
+
+.expanded-dropdown {
+	margin-bottom: 15px;
+}
+
+/* CARD STYLING  */
+.treat-card {
+	margin-bottom: 15px;
+}
+
+/* HOMEPAGE TEXT STYLING */
+.headerlink { 
+	color: black;
+}
+
+.headerlink:hover { 
+	color: #0050a4;
+}
+
+.listitems a {
+	color: black;
+}
+
+.listitems:hover a{
+	color: #0050a4;
+}
+
+.listitems:hover{
+	color: #0050a4;
+}
+
+/* TREAT INDEX PAGE TEXT STYLING */
+.treat-title { 
+	color: black;
+}
+
+.treat-title:hover { 
+	color: #0050a4;
+}
+
+.treat-title a {
+	color: black;
+}
+
+.treat-title:hover a{
+	color: #0050a4;
+}
+
+.treat-title:hover{
+	color: #0050a4;
+}
+
+/* FLAVORS INDEX PAGE TEXT STYLING */
+.flavor-title { 
+	color: black;
+}
+
+.flavor-title:hover { 
+	color: #0050a4;
+}
+
+.flavor-title a {
+	color: black;
+}
+
+.flavor-title:hover a{
+	color: #0050a4;
+}
+
+.flavor-title:hover{
+	color: #0050a4;
+}
+
+.flavor-card {
+	margin-bottom: 15px;
+}
+
+/* TREAT,FLAVOR, INDEX() BOTTOM OF PAGE BUTTON STYLING */
+.buttongroup-lower {
+	color: #333333;
+	background-color: #0050a4;
+	outline: 2px solid #0050a4;
+}
+
+.buttongroup-lower:hover {
+	color: #0050a4;
+	background-color: white;
+	outline: 2px solid #0050a4;
+}
+
+.buttongroup-lower a{
+	color: #333333;
+	background-color: #0050a4;
+}
+
+.buttongroup-lower:hover a {
+	color: #0050a4;
+	background-color: black;
+}
+
+/* TREAT SORT BUTTON STYLING */
+
+.buttongroup-upper {
+	color: #333333;
+	background-color: #0050a4;
+	outline: 2px solid #0050a4;
+	margin-bottom: 15px;
+}
+
+.buttongroup-upper:hover {
+	color: #0050a4;
+	background-color: black;
+	outline: 2px solid #0050a4;
+}
+
+.buttongroup-upper a{
+	color: #333333;
+	background-color: #0050a4;
+}
+
+.buttongroup-upper:hover a {
+	color: #0050a4;
+	background-color: black;
+}
+
+/* CREATE INDEX() FORM BUTTON STYLING */

@@ -8,6 +8,7 @@
 <h2>Treat Details</h2>
 <hr />
 <h3>Treat Name: @Html.DisplayFor(model => model.TreatName)</h3>
+<h3>Treat Price: $@Html.DisplayFor(model => model.TreatPrice)</h3>
 
 <div class="btn-group" role="group" aria-label="Basic example">
   <button class="btn buttongroup-upper ">@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</button>
@@ -24,7 +25,7 @@
       <div class="accordion-body">
         @if(@Model.FlavorTreatJoinEntities.Count == 0)
         {
-          <p>This flavor does not have any any treats added yet - @Html.ActionLink("Add an Treat", "AddTreat", new { id = Model.TreatId })</p>
+          <p>This treat does not have any any flavors added yet - @Html.ActionLink("Add a Flavor", "AddFlavor", new { id = Model.TreatId })</p>
         }
         else
         {
