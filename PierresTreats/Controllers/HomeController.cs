@@ -12,7 +12,7 @@ namespace PierresTreats.Controllers
   {
     private readonly PierresTreatsContext _db;
     private readonly UserManager<ApplicationUser> _userManager;
-    public HomeController(UserManager<ApplicationUser> userManager, RecipeBoxContext db)
+    public HomeController(UserManager<ApplicationUser> userManager, PierresTreatsContext db)
     {
       _userManager = userManager;
       _db = db;
