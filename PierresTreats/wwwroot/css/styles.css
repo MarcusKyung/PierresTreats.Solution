@@ -4,12 +4,12 @@ div#footer {
 	bottom:0px;
 	left:0px;
 	width:100%;
-	background: #0050a4;
+	background: white;
 	padding:8px;
 }
 
 #footerLink {
-	color: white;
+	color: #0050a4;
 }
 
 
@@ -17,6 +17,9 @@ div#footer {
 .navbar {
 	background-color: #0050a4;
 	padding: 5px;
+	background-image: url("/assets/flag.png");
+	background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nav-btn {
@@ -42,10 +45,12 @@ div#footer {
 
 .offcanvas-title {
 	text-decoration: underline;
+	color: #0050a4;
 }
 
 .navbar-brand {
-	font-size: larger;
+	font-size: x-large;
+	color: white;
 }
 
 .expanded-dropdown {
@@ -126,50 +131,60 @@ div#footer {
 
 /* TREAT,FLAVOR, INDEX() BOTTOM OF PAGE BUTTON STYLING */
 .buttongroup-lower {
-	color: #333333;
+	color: white;
 	background-color: #0050a4;
 	outline: 2px solid #0050a4;
+	margin-bottom: 15px;
 }
 
 .buttongroup-lower:hover {
-	color: #0050a4;
+	color: white;
 	background-color: white;
 	outline: 2px solid #0050a4;
 }
 
 .buttongroup-lower a{
-	color: #333333;
+	color: white;
 	background-color: #0050a4;
 }
 
 .buttongroup-lower:hover a {
 	color: #0050a4;
-	background-color: black;
+	background-color: white;
 }
 
 /* TREAT SORT BUTTON STYLING */
 
 .buttongroup-upper {
-	color: #333333;
+	color: white;
 	background-color: #0050a4;
 	outline: 2px solid #0050a4;
 	margin-bottom: 15px;
 }
 
 .buttongroup-upper:hover {
-	color: #0050a4;
-	background-color: black;
+	color: white;
+	background-color: white;
 	outline: 2px solid #0050a4;
 }
 
 .buttongroup-upper a{
-	color: #333333;
+	color: white;
 	background-color: #0050a4;
 }
 
 .buttongroup-upper:hover a {
 	color: #0050a4;
-	background-color: black;
+	background-color: white;
 }
 
-/* CREATE INDEX() FORM BUTTON STYLING */
+/* NAVBAR ICON */
+.custom-navbar-toggler-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url("/assets/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
