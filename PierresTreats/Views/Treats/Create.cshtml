@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PierresTreats.Models.Treat
+
+<h4>Add a New Treat</h4>
+<p>@Html.ValidationMessageFor(model => model.TreatName, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+<p>@Html.ValidationMessageFor(model => model.TreatPrice, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.TreatName, "Treat Name:" , new { @class = "form-label"})
+  @Html.TextBoxFor(model => model.TreatName, new { @class = "form-control"})
+
+  @Html.LabelFor(model => model.TreatPrice, "Treat Price:", new { @class = "form-label"})
+  @Html.TextBoxFor(model => model.TreatPrice, new { @class = "form-control", type = "number", step = "1", min = "1"})
+  <br>
+  <input type="submit" value="Add New Treat" class="btn btn buttongroup-lower"/>
+}
+<hr>
+<p></p>
+
+<div class="btn-group" role="group">
+  <button class="btn buttongroup-lower">@Html.ActionLink("Show all Treats", "Index")</button>
+  <button class="btn buttongroup-lower">@Html.ActionLink("Home", "Index", "Home")</button>
+</div>
